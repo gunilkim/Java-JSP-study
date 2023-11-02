@@ -1,0 +1,29 @@
+package board;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import common.JdbcUtil;
+
+public class BoardDao {
+	private JdbcUtil ju;
+	
+	//삽입(C)
+	public int insert(BoarVO vo) {
+		Connection con;
+		PreparedStatement pstmt;
+		String query = "insert into \"BOARD\"(\"NUM\", \"TITLE\", \"WRITER\", \"CONTENT\", \"REGDATE\", \"CNT\") values (\"BOARD_SEQ\".nextval, '제목1', '작성자1', '내용1', sysdate, 0)";
+		try {
+			con = ju.getConnection();
+			
+		}catch(SQLException e) {
+			
+		}
+	}
+	//조회(R)
+	
+	//수정(U)
+	
+	//삭제(D)
+}

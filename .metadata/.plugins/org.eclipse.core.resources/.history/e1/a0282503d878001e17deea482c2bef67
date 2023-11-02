@@ -1,0 +1,15 @@
+package board;
+
+import common.JdbcUtil;
+
+public class BoardDao {
+	private JdbcUtil ju;
+	
+	//삽입(C)
+	
+	//조회(R)
+	
+	//수정(U)
+	
+	//삭제(D)
+}

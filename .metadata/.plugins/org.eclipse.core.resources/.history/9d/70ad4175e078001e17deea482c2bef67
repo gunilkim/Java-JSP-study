@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="board.*, java.util.List"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<jsp:useBean id="vo" class="board.BoardVO"/>
+<jsp:useBean id="dao" class="board.BoardDao"/>
+<jsp:setProperty name="vo" property="*"/>
+<!-- setProperty = VO파일에서 title -> setTitle, writer -> setWriter 앞에 set붙은걸 vo 파일에서 가져옴  -->
+<%	
+	dao.insert(vo);
+	//response.sendRedirect(request.getContextPath() + "/board/list.jsp");
+%>
+<c:redirect url="${pageContext.request.contextPath}/board/list.jsp"></c:redirect>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
